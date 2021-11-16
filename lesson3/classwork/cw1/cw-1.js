@@ -1,7 +1,7 @@
 // Використовуючи данні з масиву, за допомоги document.write та циклу
 // побудувати структуру по шаблону template1.1
 
-
+//
 // let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
 // document.write('<ul>')
 // for (let i=0; i < listOfItems.length; i++){
@@ -81,14 +81,15 @@
 //     // console.log(simpson.name, simpson.age)
 // }
 //
+// document.write(`<div class="wrap">`)
 // for (const simpson of simpsons) {
-//     document.write(`<div class="simpson" style="border: 1px solid red; width: 300px">
+//     document.write(`<div class="simpson" style="border: 1px solid blue; width: 300px">
 //       <h2> ${simpson.name} ${simpson.surname}  - ${simpson.age} </h2>
 //         <p>${simpson.info} </p>
-//         <img style="width: 40%" src=" ${simpson.photo}" alt=" ${simpson.photo}">
+//         <img style="width: 60%" src=" ${simpson.photo}" alt=" ${simpson.photo}">
 //         </div>`)
 // }
-
+// document.write(`</div>`)
 // Використовуючи данні з масиву, за допомоги document.write та циклу
 // побудувати структуру по шаблону template3.1 Зробити адекватну стилізацію
 // Великими літерами прописанні властивості об'єкту які потрібно впровадити в шаблон
@@ -115,7 +116,7 @@
 //         image: 'https://yogiproducts.com/wp-content/uploads/2009/03/YT-US-CAR-RelaxedMind-C23-202201-V2-3DFront_withGlow-300DPI-1.png'
 //     },
 // ];
-//
+// //
 // document.write(`<div class="wrap">`)
 //
 // for (const product of products) {
