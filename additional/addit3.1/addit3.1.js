@@ -1,3 +1,23 @@
+
+<!--template 1.1-->
+// <div class="wrap">
+//     <div class="post-card">
+//         <h3>ID - TITLE</h3>
+//         <p>BODY</p>
+//     </div>
+
+    <!--
+    ...
+    ...
+    ...
+    other posts
+    -->
+
+
+    /*За допомогою циклу вивести всю інформацію про пости використовуючи шаблон Template 1.1.
+    * ЗА допомоги стилів побудувати структуру "сітки" по 5 об'єктів в лінію
+    * */
+
 let users = [
     {
         userId: 1,
@@ -609,6 +629,5 @@ for (let user of users) {
 </div>`)
 }
         document.write(`</div>`)
-
 
 
