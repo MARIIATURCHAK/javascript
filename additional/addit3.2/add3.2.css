@@ -1,0 +1,11 @@
+.user-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 15px;
+}
+.user-block {
+    width: 40%;
+    border: 2px solid burlywood;
+text-align: center;
+}
