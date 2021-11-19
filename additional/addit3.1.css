@@ -1,0 +1,17 @@
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.post-card h3 {
+    text-align: center;
+}
+
+.post-card {
+    width: 19%;
+    border: 1px solid #8d8080;
+}
