@@ -39,20 +39,39 @@
 
 
 // 2. Вивести за допомогою console.log кожен третій елемен
-
-
-
+// let arr = [8, 2, 3, 5, 7, 26, 56, 8, 68, 10, 15, 14, ];
+// for ( i = 2; i < arr.length; i += 3 ) {
+//         console.log(arr[i])
+//
+//     }
 
 
 // 3. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним.
+// let arr = [ 1, 2, 3, 5, 7, 26, 56, 8, 68, 10, 15];
+// for ( i = 2; i < arr.length; i += 3 ) {
+//     if (arr[i] % 2 === 0) {
+//         console.log(arr[i])
+//     }
+// }
+
 // 4. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним та записати їх в новий масив
+// let arr = [ 1, 2, 3, 5, 7, 26, 56, 8, 68, 10, 15];
+// let arr2 = [];
+// for ( i = 2; i < arr.length; i += 3 ) {
+//     if (arr[i] % 2 === 0) {
+//         arr2.push(arr[i]);
+//
+//     }
+// }
+// console.log(arr2);
+
 // 5. Вивести кожен елемент масиву, сусід справа якого є парним
 // EXAMPLE: [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ] -> Має бути виведено 1, 9, 56
 
 // let arr = [ 1, 2, 3, 5, 7, 9, 56, 8, 67 ]
-// for (let number of arr) {
-//     if(arr[number] % 2===0) {
-//         console.log(arr)
+// for (let i = 0; i < arr.length; i++) {
+//     if(arr[i] % 2===0) {
+//         console.log(arr[i-1])
 //
 //     }
 // }
@@ -69,18 +88,21 @@
 
 
 // 7. Створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
-// let array = [1,2,3]
-//
-//     let sum = 0;
-//     for(let el of array) {
-//         sum = el * 5;
-//     }
-//     console.log(sum)
 
-// massiv = [1, 2];
-// let mathe = [];
-// for (u = 0; u < massiv.length; u++){
-//     mathe.push(massiv[u] *5);
-// };
-// console.log(mathe);
+// array = [100,250,50,168,120,345,188];
+// let array2 = [];
+// for (i = 0; i < array.length; i++){
+//     array2.push(array[i] *5);
+// }
+// console.log(massiv2)
+
 // 8. Створити масив з будь якими значеннями (стрінги, числа, і тд...). пройтись по ньому, і якщо елемент є числом - додати його в інший масив.
+//
+// array = ['okten', 'hello', 26, true, 'smile', 2, false];
+// array2 = []
+// for (let i = 0; i < array.length; i++) {
+// if (typeof array[i] === "number") {
+//     array2.push(array[i])
+// }
+// }
+// console.log(array2)
