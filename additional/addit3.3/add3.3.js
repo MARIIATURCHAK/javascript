@@ -77,14 +77,14 @@
 // }
 
 // 6. Є масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. Обрахувати середній чек.
-// let array = [4,3,4,5];
-// for (const el of array) {
-//     let sum = 0;
-//     for (let el of array) {
-//         sum = sum + el/ array.length;
-//     }
-//     console.log(sum);
-// }
+let array = [100,250,50,168,120,345,188];
+let sum = 0;
+for (i=0; i < array.length; i++) {
+        sum = sum + array[i];
+    }
+    sum = sum / array.length;
+    console.log(sum)
+
 
 
 // 7. Створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
