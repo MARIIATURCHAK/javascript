@@ -12,8 +12,8 @@
 // - створити функцію яка обчислює та повертає площу циліндру
 // S = 2 π R (R + h)
 //
-// let areacylinder = (a, Pi, r, r2, h) => a * Pi * r * (r2 + h);
-// console.log(areacylinder(2, 3.14, 10, 10, 5));
+let areacylinder = (a, Pi, r, h) => a * Pi * r * (r + h);
+console.log(areacylinder(2, 3.14, 10,  5));
 
 // - створити функцію яка приймає масив та виводить кожен його елемент
 
