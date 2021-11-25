@@ -12,8 +12,8 @@
 // - створити функцію яка обчислює та повертає площу циліндру
 // S = 2 π R (R + h)
 //
-let areacylinder = (a, Pi, r, h) => a * Pi * r * (r + h);
-console.log(areacylinder(2, 3.14, 10,  5));
+// let areacylinder = (a, Pi, r, h) => a * Pi * r * (r + h);
+// console.log(areacylinder(2, 3.14, 10,  5));
 
 // - створити функцію яка приймає масив та виводить кожен його елемент
 
@@ -29,30 +29,30 @@ console.log(areacylinder(2, 3.14, 10,  5));
 //
 // let dataparagraph = (a) => {
 //     document.write(`<p>${a}</p>`)
-// }
-// dataparagraph ('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci explicabo molestiae qui reprehenderit?')
+// };
+// dataparagraph ('Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci explicabo molestiae qui reprehenderit?');
 
 
 // - створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
-//
+// //
 // let unorderedlist = (a) => {
-//     document.write(`<ul>`)
-//     document.write(`<li>${a}</li>`)
-//     document.write(`<li>${a}</li>`)
-//     document.write(`<li>${a}</li>`)
-//     document.write(`</ul>`)
-// }
-// unorderedlist("item")
+//     document.write(`<ul>`);
+//     document.write(`<li>${a}</li>`);
+//     document.write(`<li>${a}</li>`);
+//     document.write(`<li>${a}</li>`);
+//     document.write(`</ul>`);
+// };
+// unorderedlist("item");
 
 // - створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
 // let unorderedlist = (a, size) => {
-//     document.write(`<ul>`)
+//     document.write(`<ul>`);
 //     for (let i = 0; i < size; i++) {
-//         document.write(`<li>${a}</li>`)
+//         document.write(`<li>${a}</li>`);
 //     }
-//     document.write(`</ul>`)
-// }
-// unorderedlist("item", 3)
+//     document.write(`</ul>`);
+// };
+// unorderedlist("item", 3);
 
 // - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
 //
@@ -91,5 +91,5 @@ console.log(areacylinder(2, 3.14, 10,  5));
 //     ${simpson.name} -
 //     ${simpson.age} </div>`)
 //     }
-// }
+// };
 // object(simpson);
