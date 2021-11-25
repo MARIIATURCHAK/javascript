@@ -27,17 +27,18 @@
 
 
 // - створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
-let createRandom = (lenght) => {
-    let newArray = [];
-    for (let i = 0; i < lenght; i++){
-        newArray.push(Math.floor(Math.random() * 100));
-    }
-    return newArray;
-}
-let result = createRandom(10);
-console.log(result);
+// let createRandom = (lenght) => {
+//     let newArray = [];
+//     for (let i = 0; i < lenght; i++){
+//         newArray.push(Math.round(Math.random() * 100));
+//     }
+//     return newArray;
+// }
+// let result = createRandom(10);
+// console.log(result);
 
-// - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. Відсортувати його за допомоги sort
+// - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих
+// числових значень. Відсортувати його за допомоги sort
 //
 // result.sort(function(a, b) {
 //     return a - b;
@@ -45,9 +46,11 @@ console.log(result);
 // console.log(result);
 
 
-// - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. відфільтрувати  його за допомоги filter, залишивши тільки парні числа
+// - створити (або згенерувати, за допомоги попередньої функції)
+// масив рандомних цілих числових значень.
+// відфільтрувати  його за допомоги filter, залишивши тільки парні числа
 
-//
+// //
 // let filterArray = result.filter(item => {
 //     return item % 2 === 0;
 // });
@@ -56,9 +59,10 @@ console.log(result);
 
 // - створити масив рандомних цілих числових значень (або згенерувати, за допомоги попередньої функції) .
 // за допомоги map та колбеку перетворити всі об'єкти в масиві на стрінгові.
+//
+// let map = result.map (num => num + " ");
+// console.log(map);
 
-let map = result.map (num => num + " ");
-console.log(map);
 
 // - створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого,
 // або навпаки в залежності від значення аргументу direction.
@@ -66,7 +70,17 @@ console.log(map);
 // sortNums('ascending') // [3,11,21]
 // sortNums('descending') // [21,11,3]
 //
-//
+// let sortNums = (numbers, direction) => {
+//     if (direction === 'ascending') {
+//         return numbers.sort((a, b) => a - b);
+//     } else if (direction === 'descending') {
+//         return numbers.sort((a, b) => b - a);
+//     }
+//     return [];
+// };
+// console.log(sortNums([11, 21, 3], 'descending') );
+
+
 // - є масив
 
 // let coursesAndDurationArray = [
@@ -77,9 +91,16 @@ console.log(map);
 //     {title: 'FullStack', monthDuration: 7},
 //     {title: 'Frontend', monthDuration: 4}
 // ];
-// // -- відсортувати його за спаданням за monthDuration
-// coursesAndDurationArray.sort()
+// -- відсортувати його за спаданням за monthDuration
+
+// let sort = coursesAndDurationArray.sort((md1, md2) => {
+//     return md2.monthDuration - md1.monthDuration;
 // });
-// console.log(coursesAndDurationArray);
+// console.log(sort);
 
 // -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
+
+// let filter = coursesAndDurationArray.filter(md1 => {
+//     return md1.monthDuration > 5;
+// });
+// console.log(filter);
