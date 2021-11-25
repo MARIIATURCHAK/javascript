@@ -77,7 +77,7 @@
 
 
 let insert_dash = (toUpperCase1) =>{
-    return toUpperCase1.replaceAll(' ', '-')
+    return toUpperCase1.replaceAll(' ', '-');
 }
 let str = "HTML JavaScript PHP";
 let toUpperCase1 = str.toUpperCase();
@@ -95,10 +95,12 @@ document.write(insert_dash(toUpperCase1));
 // console.log(firstSymbolUp('hello okten'));
 
 // - Напишіть функцію capitalize(str), яка повертає рядок, у якому кожне слово починається з великої літери.
-let capitalize = (str) => {
-    if ( typeof str[0] === 'string') {
-        return str[0].toUpperCase() + + str.slice(1);
-    }
-}
-document.write(capitalize('hello okten'));
-console.log(capitalize('hello okten'));
+//
+// let capitalize = (str) => {
+//     return str.split(' ').map(value => value[0].toUpperCase() + value.slice(1)).join(' ');
+//
+// };
+// document.write(capitalize('hello okten'));
+// console.log(capitalize('hello okten'));
+
+
