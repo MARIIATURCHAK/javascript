@@ -9,8 +9,8 @@
 //     } else if (number3 < number1 && number3 < number2) {
 //         console.log(number3);
 //     }
-// }
-// minNumber(70, 55, 100)
+// };
+// minNumber(70, 55, 100);
 
 
 // - створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
@@ -23,8 +23,8 @@
 //     } else if (number3 > number1 && number3 > number2) {
 //         console.log(number3);
 //     }
-// }
-// maxNumber(70, 55, 100)
+// };
+// maxNumber(70, 55, 100);
 
 
 // - створити функцію яка повертає найбільше число з масиву
@@ -39,7 +39,7 @@
 //      }
 //     return max;
 // };
-// console.log(maxArray())
+// console.log(maxArray());
 
 
 
@@ -54,8 +54,8 @@
 //         }
 //     }
 //     return min;
-// }
-// console.log(minArray())
+// };
+// console.log(minArray());
 
 
 // - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
@@ -67,8 +67,8 @@
 //         sum = sum + arrayMa
 //     }
 //     return sum
-// }
-// console.log(sumarray())
+// };
+// console.log(sumarray());
 
 
 // - створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.
@@ -80,8 +80,8 @@
 //         sum = sum + el;
 //     }
 //     return sum/arraymid.length;
-// }
-// console.log(midarray())
+// };
+// console.log(midarray());
 
 
 // - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
@@ -98,7 +98,7 @@
 //     }
 //     console.log(max);
 //     return min;
-// }
+// };
 //
 // console.log(numberRandom(-7, 12, 100,300, 155));
 
@@ -114,8 +114,8 @@
 //         newArray.push(Math.floor(Math.random() * 100));
 //     }
 //     return newArray;
-// }
-// console.log(createRandom(20))
+// };
+// console.log(createRandom(20));
 
 
 // - створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit. limit - аргумент, який характеризує кінцеве значення діапазону.
@@ -126,8 +126,8 @@
 //         newArray.push(Math.floor(Math.random() * limit));
 //     }
 //     return newArray;
-// }
-// console.log(createRandom(20, 500))
+// };
+// console.log(createRandom(20, 500));
 
 
 // - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1]..
@@ -140,6 +140,6 @@
 //         newArr.push(arrElement);
 //     }
 //     return newArr;
-// }
+// };
 //
 // console.log(reverse(array));
