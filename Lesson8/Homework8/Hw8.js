@@ -17,7 +17,7 @@ rulesElement.style.background = 'red';
 
 
 let ulColection = document.getElementsByTagName('ul');
-console.log(liColection);
+console.log(ulColection);
 for (const ulColectionElement of ulColection) {
     console.log(ulColectionElement);
 ulColectionElement.style.background = 'red';
