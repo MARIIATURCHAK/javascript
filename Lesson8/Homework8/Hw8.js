@@ -16,11 +16,11 @@ contentElement.style.background = 'red';
 rulesElement.style.background = 'red';
 
 
-let liColection = document.getElementsByTagName('ul');
+let ulColection = document.getElementsByTagName('ul');
 console.log(liColection);
-for (const liColectionElement of liColection) {
-    console.log(liColectionElement);
-liColectionElement.style.background = 'red';
+for (const ulColectionElement of ulColection) {
+    console.log(ulColectionElement);
+ulColectionElement.style.background = 'red';
 }
 
 // -- змініть кожному елементу колір тексту на синій
