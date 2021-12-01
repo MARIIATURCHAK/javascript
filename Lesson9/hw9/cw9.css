@@ -1,0 +1,11 @@
+.wrap {
+    width: 500px;
+    height: 100px;
+    background: #8d8080;
+    color: gainsboro;
+    font-weight: 900;
+    text-align: center;
+}
+.collapse {
+    margin: 5px;
+}
