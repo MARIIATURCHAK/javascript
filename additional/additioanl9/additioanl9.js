@@ -232,44 +232,32 @@
             }
         }
     ];
+let divConteiner = document.createElement('div');
+document.body.appendChild(divConteiner);
+divConteiner.classList.add('conteiner');
 
 for (const usersListElement of usersList) {
     let divElement = document.createElement('div');
-
     let divID = document.createElement('div');
     divID.innerText = usersListElement.id;
-
-    let divname = document.createElement('div');
-    divname.innerText = usersListElement.name;
-
-
-    let divusername = document.createElement('div');
-    divusername.innerText = usersListElement.username;
-
-    let divemail = document.createElement('div');
-    divemail.innerText = usersListElement.email;
-
-
-
+    let divName = document.createElement('div');
+    divName.innerText = usersListElement.name;
+    let divUsername = document.createElement('div');
+    divUsername.innerText = usersListElement.username;
+    let divEmail = document.createElement('div');
+    divEmail.innerText = usersListElement.email;
     let divAddress= document.createElement('div');
-
     let divAddressStreet = document.createElement('div');
     divAddressStreet.innerText = usersListElement.address.street;
-
     let divAddresSuite = document.createElement('div');
     divAddresSuite.innerText = usersListElement.address.suite;
-
     let divAddressCity = document.createElement('div');
     divAddressCity.innerText = usersListElement.address.city;
-
     let divAddressZipcode = document.createElement('div');
     divAddressZipcode.innerText = usersListElement.address.zipcode;
-
     let divAddressGeo= document.createElement('div');
-
     let divAddressGeoLat = document.createElement('div');
     divAddressGeoLat.innerText = usersListElement.address.geo.lat;
-
     let divAddressGeolng = document.createElement('div');
     divAddressGeolng.innerText = usersListElement.address.geo.lng;
 
@@ -283,39 +271,31 @@ for (const usersListElement of usersList) {
 
     let divCompanyName = document.createElement('div');
     divCompanyName.innerText = usersListElement.company.name;
+    //
+    let divCompanyCatchPhrase = document.createElement('div');
+    divCompanyCatchPhrase.innerText = usersListElement.company.catchPhrase;
 
     let divCompanybs = document.createElement('div');
     divCompanybs.innerText = usersListElement.company.bs;
-
- let divCompanycatchPhrase = document.createElement('div');
-    divCompanycatchPhrase.innerText = usersListElement.company.catchPhrase;
-
-
-
-
-divElement.appendChild(divID);
-divElement.appendChild(divname);
-divElement.appendChild(divusername);
-divElement.appendChild(divemail);
+divElement.appendChild(divID)
+divElement.appendChild(divName);
+divElement.appendChild(divUsername);
+divElement.appendChild(divEmail);
 divElement.appendChild(divAddress);
-divAddress.appendChild(divAddressStreet);
-divAddress.appendChild(divAddresSuite);
-divAddress.appendChild(divAddressCity);
-divAddress.appendChild(divAddressZipcode);
-divAddress.appendChild(divAddressStreet);
-divAddress.appendChild(divAddressGeo);
-    divAddressGeo.appendChild(divAddressGeoLat);
-    divAddressGeo.appendChild(divAddressGeolng);
-
-
-divElement.appendChild(divPhone)
-    divElement.appendChild(divWebsite)
-    divElement.appendChild(divCompany)
-    divCompany.appendChild(divCompanyName)
-    divCompany.appendChild(divCompanycatchPhrase)
-
-
-  document.body.appendChild(divElement)
+    divAddress.appendChild(divAddressStreet);
+    divAddress.appendChild(divAddresSuite);
+    divAddress.appendChild(divAddressCity);
+    divAddress.appendChild(divAddressZipcode);
+    divAddress.appendChild(divAddressGeo);
+        divAddressGeo.appendChild(divAddressGeoLat);
+        divAddressGeo.appendChild(divAddressGeolng);
+divElement.appendChild(divPhone);
+divElement.appendChild(divWebsite);
+divElement.appendChild(divCompany);
+    divCompany.appendChild(divCompanyName);
+    divCompany.appendChild(divCompanyCatchPhrase);
+    divCompany.appendChild(divCompanybs);
+divConteiner.appendChild(divElement);
 }
 
 // Створити під кожен елемент окремий блок. В цьому блоці, під кожну властивість, та властивості внутрішніх об'єктів створити свої окремі блок.
