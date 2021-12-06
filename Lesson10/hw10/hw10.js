@@ -30,24 +30,46 @@
 // }
 
 // - Создайте меню, которое раскрывается/сворачивается при клике
-//
-// let menuElement = document.getElementById('menu')
+
+// let menuElement = document.getElementById('menu');
 // let listElement = document.getElementById('list');
 //
-// menuElement.onmouseover = function () {
-//     listElement.style.display = 'none'
+// listElement.onclick = function () {
+//     menuElement.classList.toggle('hidden');
 // };
-// menuElement.onmouseleave = function () {
-//     listElement.style.display = 'block';
-// }
-
-let menuElement = document.getElementById('menu');
-let listElement = document.getElementById('list');
-
-listElement.onclick = function () {
-    menuElement.classList.toggle('hidden');
-};
 
 // - Создать список комментариев , пример объекта коментария - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.
 //     Вывести список комментариев в документ, каждый в своем блоке.
 //     Добавьте каждому комментарию по кнопке для сворачивания его body.
+
+let array = [
+    {title : 'lorem1', body:'lorem ipsum dolo ameti'},
+    {title : 'lorem2', body:'lorem ipsum dolo sit '},
+    {title : 'lorem3', body:'lorem ipsum dolo sit ame'},
+    {title : 'lorem4', body:'lorem ipsum sit ameti'},
+    {title : 'lorem5', body:'lorem ipsum dolo sit ameti.'}
+];
+let divElements = document.createElement('div');
+for (const Element of array) {
+let div = document.createElement('div')
+let h2 = document.createElement('h3')
+let p = document.createElement('p')
+let button = document.createElement('button')
+
+        h2.innerText = Element.title;
+        p.innerHTML = Element.body;
+        button.innerHTML = 'Click Here';
+
+    button.onclick = function () {
+                p.classList.add('hidden');
+                button.previousElementSibling.classList.add('hidden');
+    }
+        divElements.appendChild(div);
+        div.appendChild(h2);
+        div.appendChild(p);
+        div.appendChild(button);
+}
+document.body.appendChild(divElements)
+
+
+
