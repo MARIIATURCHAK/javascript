@@ -118,7 +118,7 @@ function item9 (sleeep) {
 }
 
 
-item1(false)
+item1(true)
 .then(done =>{
     return item2(done)
 })
