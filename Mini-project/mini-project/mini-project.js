@@ -3,8 +3,6 @@
 // 2 Вывести id,name всех user в index.html. Отдельный блок для каждого user.
 // 3 Добавить каждому блоку кнопку/ссылку , при клике на которую происходит переход на страницу user-details.html,
 // которая имеет детальную информацию про объект на который кликнули
-
-//
 //
 fetch('https://jsonplaceholder.typicode.com/users')
     .then((response) => response.json())
@@ -18,33 +16,16 @@ fetch('https://jsonplaceholder.typicode.com/users')
             let button = document.createElement('button');
             button.classList.add('btn');
             button.innerText = 'click';
-            // button.onclick = () => {
-            //     fetch('https://jsonplaceholder.typicode.com/users/' + user.id + '/users')
-            //         .then((response) => response.json())
-            //         .then(users => {
-            //             for (const el of users) {
-            //                 if (el.id === user.id) {
-            //                     let divComment = document.createElement('div');
-            //                     divComment.classList.add('divComment');
-            //                     divComment.innerHTML = `
-            //               <h2> ${el.id}</h2>
-            //               <h3> ${el.name}</h3>
-            //               <h4> ${el.username}</h4>
-            //               <h3> ${el.email}</h3>
-            //               <h3>${el.address}</h3>
-            //             `;
-            //
-            //                     wrap.appendChild(divComment)
-            //                     button.disabled = true;
-            //                 }
-            //             }
-            //         })
-            //
+            button.onclick = () => {
+                            location.href = `user-details.html`;
 
-                divUser.appendChild(button)
-                wrap.appendChild(divUser)
-                div.appendChild(wrap)
-            // }
+
+
+            }
+
+            divUser.appendChild(button);
+            wrap.appendChild(divUser);
+            div.appendChild(wrap);
         }
     })
 
@@ -67,3 +48,6 @@ fetch('https://jsonplaceholder.typicode.com/users')
 //     Все без исключения элементы, который характеризируют user,post,comment  визуализировать, так, что бы было видно их блоки (дать задний фон + margin. Иными словами - крайне четкая сетка)
 //
 //
+
+
+
