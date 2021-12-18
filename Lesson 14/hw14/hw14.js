@@ -155,125 +155,244 @@
 
 
 
+// function item1(wakeup) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (wakeup) {
+//                 console.log('hello');
+//                 resolve(wakeup)
+//             } else {
+//                 console.log('bye');
+//                 reject('Oops');
+//             }
+//         }, 3);
+//     })
+// }
+// function item2(brakfast) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (brakfast) {
+//                 console.log('delicious');
+//                 resolve(brakfast);
+//             } else {
+//                 console.log('bee');
+//                 reject('nooooooooo');
+//             }
+//         }, 0.5);
+//     })
+// }
+// function item3(shover) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (shover) {
+//                 console.log('hot');
+//                 resolve(shover)
+//             } else {
+//                 console.log('brr');
+//                 reject('O no');
+//             }
+//         }, 1);
+//     })
+// }
+// function item4(bus) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (bus) {
+//                 console.log('bus');
+//                 resolve(bus);
+//             } else {
+//                 console.log('nobus');
+//                 reject('Omg');
+//             }
+//         }, 0.3);
+//     })
+// }
+// function item5(work) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (work) {
+//                 console.log('work');
+//                 resolve(work);
+//             } else {
+//                 console.log('nowork');
+//                 reject('nowork');
+//             }
+//         }, 5);
+//     })
+// }
+// function item6(bushome) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (bushome) {
+//                 console.log('bus home');
+//                 resolve(bushome);
+//             } else {
+//                 console.log('no bus home');
+//                 reject('Oops');
+//             }
+//         }, 0.1);
+//     })
+// }
+// function item7(dinner) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (dinner) {
+//                 console.log('dinner');
+//                 resolve(dinner);
+//             } else {
+//                 console.log('no dinner');
+//                 reject('nodinner');
+//             }
+//         }, 0.5);
+//     })
+// }
+// function item8(lesson) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (lesson) {
+//                 console.log('lesson');
+//                 resolve(lesson);
+//             } else {
+//                 console.log('nolesson');
+//                 reject('nolesson');
+//             }
+//         }, 1);
+//     })
+// }
+// function item9(sleeep) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (sleeep) {
+//                 console.log('sleeep');
+//                 resolve(sleeep);
+//             } else {
+//                 console.log('no sleeep');
+//                 reject('nosleeep')
+//             }
+//         }, 3);
+//     })
+// }
+//
+// async function day() {
+//     try {
+//         const one = await item1 (true);
+//         const two = await item2 (one);
+//         const three = await item3 (two);
+//         const four = await item4 (three);
+//         const five = await item5 (four);
+//         const six = await item6 (five);
+//         const seven = await item7 (six);
+//         const eight = await item8 (seven);
+//         const nine = await item9 (eight);
+//     } catch (e) {
+//         console.error(e)
+//     }
+// }
+// day()
 
-function item1(wakeup, callback) {
-        setTimeout(() => {
-            if (wakeup) {
-                console.log('hello');
-               callback ();
-            } else {
-                console.log('bye');
-            }
-        }, 3);
 
-}
-function item2(brakfast, callback) {
-        setTimeout(() => {
-            if (brakfast) {
-                console.log('good');
-                callback ();
-            } else {
-                console.log('bee');
-            }
-        }, 0.5);
-}
-function item3(shover, callback) {
-        setTimeout(() => {
-            if (shover) {
-                console.log('hot');
-                callback ();
-            } else {
-                console.log('brr');
-            }
-        }, 1);
-}
-function item4(bus, callback) {
-        setTimeout(() => {
-            if (bus) {
-                console.log('bus');
-                callback ();
-            } else {
-                console.log('nobus');
-            }
-        }, 0.3);
-}
-function item5(work, callback) {
-        setTimeout(() => {
-            if (work) {
-                console.log('work');
-                callback ();
-            } else {
-                console.log('nowork');
-            }
-        }, 5);
-}
-function item6(bushome, callback) {
-        setTimeout(() => {
-            if (bushome) {
-                console.log('bushome');
-                callback ();
-            } else {
-                console.log('nobushome');
-            }
-        }, 0.1);
-}
-function item7(dinner, callback) {
-        setTimeout(() => {
-            if (dinner) {
-                console.log('dinner');
-                callback ();
-            } else {
-                console.log('nodinner');
-            }
-        }, 0.5);
-}
-function item8(lesson, callback) {
-        setTimeout(() => {
-            if (lesson) {
-                console.log('lesson');
-                callback ();
-            } else {
-                console.log('nolesson');
-            }
-        }, 1);
-}
-function item9(sleeep, callback) {
-        setTimeout(() => {
-            if (sleeep) {
-                console.log('sleeep');
-                callback ();
-            } else {
-                console.log('nosleeep');
-            }
-        }, 3);
-}
+//Нажаль як робити колл беками так і не змогла зрозуміти колт дві функції все зрозуміло а як застосувати в більше нажаль не зрозуміла
 
+// let time = 1;
+// function item1 (wakeup, callback) {
+//     setTimeout(() => {
+//         if (wakeup) {
+//             time += 1;
+//             console.log('hello');
+//             callback(time);
+//         } else {
+//             console.log('bye');
+//         }
+//     }, 3);
+// }
+//
+// function item2(brakfast, callback) {
+//     setTimeout(() => {
+//         if (brakfast) {
+//             time += 20;
+//             console.log('good');
+//             callback(time);
+//         } else {
+//             console.log('bee');
+//         }
+//     }, 0.5);
+// }
+//
+// function item3(shover, callback) {
+//         setTimeout(() => {
+//             if (shover) {
+//                 time += 15;
+//                 console.log('hot');
+//                 callback (time);
+//             } else {
+//                 console.log('brr');
+//             }
+//         }, 1);
+// }
+// function item4(bus, callback) {
+//         setTimeout(() => {
+//             if (bus) {
+//                 time += 35;
+//                 console.log('bus');
+//                 callback (time);
+//             } else {
+//                 console.log('no bus');
+//             }
+//         }, 0.3);
+// }
+// function item5(work, callback) {
+//         setTimeout(() => {
+//             if (work) {
+//                 time += 480;
+//                 console.log('work');
+//                 callback (time);
+//             } else {
+//                 console.log('no work');
+//             }
+//         }, 5);
+// }
+// function item6(bushome, callback) {
+//         setTimeout(() => {
+//             if (bushome) {
+//                 time += 30;
+//                 console.log('bushome');
+//                 callback (time);
+//             } else {
+//                 console.log('no bus home');
+//             }
+//         }, 0.1);
+// }
+// function item7(dinner, callback) {
+//         setTimeout(() => {
+//             if (dinner) {
+//                 time += 30;
+//                 console.log('dinner');
+//                 callback (time);
+//             } else {
+//                 console.log('no dinner');
+//             }
+//         }, 0.5);
+// }
+// function item8(lesson, callback) {
+//         setTimeout(() => {
+//             if (lesson) {
+//                 time += 180;
+//                 console.log('lesson');
+//                 callback (time);
+//             } else {
+//                 console.log('no lesson');
+//             }
+//         }, 1);
+// }
+// function item9(sleeep, callback) {
+//         setTimeout(() => {
+//             if (sleeep) {
+//                 time += 649;
+//                 console.log('sleeep');
+//                 callback (time);
+//             } else {
+//                 console.log('no sleeep');
+//             }
+//         }, 3);
+// }
 
-item1(true, () => {
-    item2(item3())
-})
-item2(true, () => {
-    console.log('two');
-})
-item3(true, () => {
-    console.log('three');
-})
-item4(true, () => {
-    console.log('four');
-})
-item5(true, () => {
-    console.log('five');
-})
-item6(true, () => {
-    console.log('six');
-})
-item7(true, () => {
-    console.log('seven');
-})
-item8(true, () => {
-    console.log('eight');
-
-})
-item9(true, () => {
-    console.log('nine');
-})
