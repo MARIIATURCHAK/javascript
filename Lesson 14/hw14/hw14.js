@@ -154,7 +154,6 @@
 //     })
 
 
-
 // function item1(wakeup) {
 //     return new Promise((resolve, reject) => {
 //         setTimeout(() => {
@@ -291,15 +290,13 @@
 // day()21
 
 
-
-
-function item1 (wakeup, callback) {
+function item1(wakeup, callback) {
     setTimeout(() => {
         if (wakeup) {
             console.log('hello');
-            callback();
+            callback(null);
         } else {
-            console.log('bye');
+            callback('bye', null);
         }
     }, 3);
 }
@@ -308,88 +305,176 @@ function item2(brakfast, callback) {
     setTimeout(() => {
         if (brakfast) {
             console.log('good');
-            callback();
+            callback(null);
         } else {
-            console.log('bee');
+            callback('bee', null);
         }
     }, 0.5);
 }
 
 function item3(shover, callback) {
-        setTimeout(() => {
-            if (shover) {
-                console.log('hot');
-                callback ();
-            } else {
-                console.log('brr');
-            }
-        }, 1);
+    setTimeout(() => {
+        if (shover) {
+            console.log('hot');
+            callback(null);
+        } else {
+            callback('cold', null);
+        }
+    }, 1);
 }
+
 function item4(bus, callback) {
-        setTimeout(() => {
-            if (bus) {
-                console.log('bus');
-                callback ();
-            } else {
-                console.log('no bus');
-            }
-        }, 0.3);
+    setTimeout(() => {
+        if (bus) {
+            console.log('bus');
+            callback(null);
+        } else {
+            callback(' no bus', null);
+        }
+    }, 0.3);
 }
+
 function item5(work, callback) {
-        setTimeout(() => {
-            if (work) {
-                console.log('work');
-                callback ();
-            } else {
-                console.log('no work');
-            }
-        }, 5);
+    setTimeout(() => {
+        if (work) {
+            console.log('work');
+            callback(null);
+        } else {
+            callback('no work', null);
+        }
+    }, 5);
 }
+
 function item6(bushome, callback) {
-        setTimeout(() => {
-            if (bushome) {
-                console.log('bushome');
-                callback ();
-            } else {
-                console.log('no bus home');
-            }
-        }, 0.1);
+    setTimeout(() => {
+        if (bushome) {
+            console.log('bus home');
+            callback(null);
+        } else {
+            callback('no bus home', null);
+        }
+    }, 0.1);
 }
+
 function item7(dinner, callback) {
-        setTimeout(() => {
-            if (dinner) {
-                console.log('dinner');
-                callback ();
-            } else {
-                console.log('no dinner');
-            }
-        }, 0.5);
+    setTimeout(() => {
+        if (dinner) {
+            console.log('dinner');
+            callback(null);
+        } else {
+            callback('no dinner', null);
+        }
+    }, 0.5);
 }
+
 function item8(lesson, callback) {
-        setTimeout(() => {
-            if (lesson) {
-                console.log('lesson');
-                callback ();
-            } else {
-                console.log('no lesson');
-            }
-        }, 1);
+    setTimeout(() => {
+        if (lesson) {
+            console.log('lesson');
+            callback(null);
+        } else {
+            callback('no lesson', null);
+        }
+    }, 1);
 }
+
 function item9(sleeep, callback) {
-        setTimeout(() => {
-            if (sleeep) {
-                console.log('sleeep');
-                callback ();
-            } else {
-                console.log('no sleeep');
-            }
-        }, 3);
+    setTimeout(() => {
+        if (sleeep) {
+            console.log('sleep');
+            callback();
+        } else {
+            callback('no sleep', null);
+        }
+    }, 3);
 }
 
 item1(true, () => {
-    item2(true, ()=> {
-        item3(true, ()=> {
-            console.log('done')
+    item2(true, () => {
+        item3(true, () => {
+            item4(true, () => {
+                item5(true, () => {
+                    item5(true, () => {
+                        item6(true, () => {
+                            item7(true, () => {
+                                item8(true, () => {
+                                    item9(true, () => {
+                                        console.log('done')
+                                    })
+                                })
+                            })
+                        })
+                    })
+                })
+            })
         })
     })
 })
+
+
+
+// item1(false, (err) => {
+//     if (err) {
+//         console.log(err)
+//     } else {
+//         item2(false, (err2) => {
+//             if (err2) {
+//                 console.error(err2)
+//             } else {
+//                 item3(false, (err3) => {
+//                     if (err3) {
+//                         console.error(err3)
+//                     } else {
+//                         item4(false, (err4) => {
+//                             if (err4) {
+//                                 console.error(err4)
+//                             } else {
+//                                 item5(false, (err5) => {
+//                                     if (err5) {
+//                                         console.error(err5)
+//                                     } else {
+//                                         item5(false, (err6) => {
+//                                             if (err5) {
+//                                                 console.error(err6)
+//                                             } else {
+//                                                 item6(false, (err7) => {
+//                                                     if (err6) {
+//                                                         console.error(err7)
+//                                                     } else {
+//                                                         item7(false, (err8) => {
+//                                                             if (err7) {
+//                                                                 console.error(err8)
+//                                                             } else {
+//                                                                 item8(false, (err9) => {
+//                                                                     if (err8) {
+//                                                                         console.error(err9)
+//                                                                     } else {
+//                                                                         item9(false, (err9) => {
+//                                                                             if (err9){
+//                                                                                 console.error(err9)
+//                                                                             } else {
+//                                                                                 console.log('data')
+//                                                                                 item1(true, ()=> {
+//
+//                                                                                 })
+//
+//                                                                             }
+//                                                                         })
+//                                                                     }
+//                                                                 })
+//                                                             }
+//                                                         })
+//                                                     }
+//                                                 })
+//                                             }
+//                                         })
+//                                     }
+//                                 })
+//                             }
+//                         })
+//                     }
+//                 })
+//             }
+//         })
+//     }
+// })
