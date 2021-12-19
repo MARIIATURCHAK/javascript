@@ -288,111 +288,108 @@
 //         console.error(e)
 //     }
 // }
-// day()
+// day()21
 
 
-//Нажаль як робити колл беками так і не змогла зрозуміти колт дві функції все зрозуміло а як застосувати в більше нажаль не зрозуміла
 
-// let time = 1;
-// function item1 (wakeup, callback) {
-//     setTimeout(() => {
-//         if (wakeup) {
-//             time += 1;
-//             console.log('hello');
-//             callback(time);
-//         } else {
-//             console.log('bye');
-//         }
-//     }, 3);
-// }
-//
-// function item2(brakfast, callback) {
-//     setTimeout(() => {
-//         if (brakfast) {
-//             time += 20;
-//             console.log('good');
-//             callback(time);
-//         } else {
-//             console.log('bee');
-//         }
-//     }, 0.5);
-// }
-//
-// function item3(shover, callback) {
-//         setTimeout(() => {
-//             if (shover) {
-//                 time += 15;
-//                 console.log('hot');
-//                 callback (time);
-//             } else {
-//                 console.log('brr');
-//             }
-//         }, 1);
-// }
-// function item4(bus, callback) {
-//         setTimeout(() => {
-//             if (bus) {
-//                 time += 35;
-//                 console.log('bus');
-//                 callback (time);
-//             } else {
-//                 console.log('no bus');
-//             }
-//         }, 0.3);
-// }
-// function item5(work, callback) {
-//         setTimeout(() => {
-//             if (work) {
-//                 time += 480;
-//                 console.log('work');
-//                 callback (time);
-//             } else {
-//                 console.log('no work');
-//             }
-//         }, 5);
-// }
-// function item6(bushome, callback) {
-//         setTimeout(() => {
-//             if (bushome) {
-//                 time += 30;
-//                 console.log('bushome');
-//                 callback (time);
-//             } else {
-//                 console.log('no bus home');
-//             }
-//         }, 0.1);
-// }
-// function item7(dinner, callback) {
-//         setTimeout(() => {
-//             if (dinner) {
-//                 time += 30;
-//                 console.log('dinner');
-//                 callback (time);
-//             } else {
-//                 console.log('no dinner');
-//             }
-//         }, 0.5);
-// }
-// function item8(lesson, callback) {
-//         setTimeout(() => {
-//             if (lesson) {
-//                 time += 180;
-//                 console.log('lesson');
-//                 callback (time);
-//             } else {
-//                 console.log('no lesson');
-//             }
-//         }, 1);
-// }
-// function item9(sleeep, callback) {
-//         setTimeout(() => {
-//             if (sleeep) {
-//                 time += 649;
-//                 console.log('sleeep');
-//                 callback (time);
-//             } else {
-//                 console.log('no sleeep');
-//             }
-//         }, 3);
-// }
 
+function item1 (wakeup, callback) {
+    setTimeout(() => {
+        if (wakeup) {
+            console.log('hello');
+            callback();
+        } else {
+            console.log('bye');
+        }
+    }, 3);
+}
+
+function item2(brakfast, callback) {
+    setTimeout(() => {
+        if (brakfast) {
+            console.log('good');
+            callback();
+        } else {
+            console.log('bee');
+        }
+    }, 0.5);
+}
+
+function item3(shover, callback) {
+        setTimeout(() => {
+            if (shover) {
+                console.log('hot');
+                callback ();
+            } else {
+                console.log('brr');
+            }
+        }, 1);
+}
+function item4(bus, callback) {
+        setTimeout(() => {
+            if (bus) {
+                console.log('bus');
+                callback ();
+            } else {
+                console.log('no bus');
+            }
+        }, 0.3);
+}
+function item5(work, callback) {
+        setTimeout(() => {
+            if (work) {
+                console.log('work');
+                callback ();
+            } else {
+                console.log('no work');
+            }
+        }, 5);
+}
+function item6(bushome, callback) {
+        setTimeout(() => {
+            if (bushome) {
+                console.log('bushome');
+                callback ();
+            } else {
+                console.log('no bus home');
+            }
+        }, 0.1);
+}
+function item7(dinner, callback) {
+        setTimeout(() => {
+            if (dinner) {
+                console.log('dinner');
+                callback ();
+            } else {
+                console.log('no dinner');
+            }
+        }, 0.5);
+}
+function item8(lesson, callback) {
+        setTimeout(() => {
+            if (lesson) {
+                console.log('lesson');
+                callback ();
+            } else {
+                console.log('no lesson');
+            }
+        }, 1);
+}
+function item9(sleeep, callback) {
+        setTimeout(() => {
+            if (sleeep) {
+                console.log('sleeep');
+                callback ();
+            } else {
+                console.log('no sleeep');
+            }
+        }, 3);
+}
+
+item1(true, () => {
+    item2(true, ()=> {
+        item3(true, ()=> {
+            console.log('done')
+        })
+    })
+})
