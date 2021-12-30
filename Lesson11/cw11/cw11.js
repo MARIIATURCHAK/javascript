@@ -25,7 +25,6 @@ for (const user of users) {
     userdiv.className = 'user';
     let btn = document.createElement('button');
     btn.innerText = "add";
-    userdiv.innerText = `${user.name}, ${user.age}`;
     btn.onclick = () => {
         let card = JSON.parse(localStorage.getItem(key));
         card.push(user);

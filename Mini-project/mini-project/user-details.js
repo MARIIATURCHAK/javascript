@@ -1,28 +1,54 @@
-//
-fetch('https://jsonplaceholder.typicode.com/users')
-    .then((response) => response.json())
-    .then(users => {
-        for (const user of users) {
-            fetch('https://jsonplaceholder.typicode.com/users + user.id + /users')
-                .then((response) => response.json())
-                .then(users => {
-                    let wrap = document.createElement('div')
-                    wrap.classList.add('wrap');
-                    for (const el of users) {
-                        if (user.id === el.id) {
-                            let divComment = document.createElement('div');
-                            divComment.classList.add('divComment');
-                            divComment.innerHTML = `
-                      <h2> ${el.id}</h2>
-                      <h3> ${el.name}</h3>
-                      <h4> ${el.username}</h4>
-                      <h3> ${el.email}</h3>
-                    `;
-                            wrap.appendChild(divComment);
-                            div.appendChild(wrap);
-                        }
-                    }
-                })
+let url = new URL(location.href);
+let jsonUserOb = url.searchParams.get('id');
 
+let container = document.getElementById('div')
+fetch('https://jsonplaceholder.typicode.com/users/' + jsonUserOb)
+    .then((response) => response.json())
+    .then(user => {
+        let divUser = document.createElement('div');
+        divUser.classList.add('divUser');
+        let main = document.createElement('div');
+        main.classList.add('main');
+        main.innerText = ` id: ${user.id} name: ${user.name} username: ${user.username} email: ${user.email}`;
+
+        let address = document.createElement('div');
+        address.classList.add('address');
+        address.innerText = `street: ${user.address.street} suite: ${user.address.suite} city: ${user.address.city} zipcode: ${user.address.zipcode} 
+       lat: ${user.address.geo.lat} lng:  ${user.address.geo.lng}`;
+
+        let phone = document.createElement('div');
+        phone.classList.add('phone');
+        phone.innerText = `phone: ${user.phone}`;
+
+        let website = document.createElement('div');
+        website.classList.add('website');
+        website.innerText = `website: ${user.website}`;
+
+        let company = document.createElement('div');
+        company.classList.add('company');
+        company.innerText = `company name: ${user.company.name} company catch phrase: ${user.company.catchPhrase} company bs: ${user.company.bs}`;
+
+        let postOfCurrentUser = document.createElement('button');
+        postOfCurrentUser.classList.add('postButton');
+        postOfCurrentUser.innerText = 'post of current user'
+        postOfCurrentUser.onclick = () => {
+                fetch(`https://jsonplaceholder.typicode.com/users/${user.id}/posts`)
+                    .then((response) => response.json())
+                    .then(posts => {
+                            for (const post of posts) {
+                                    let postDiv = document.createElement('div');
+                                    postDiv.classList.add('postDiv');
+                                    postDiv.innerText = `title: ${post.title}`;
+
+                                    let detailsPostLink = document.createElement('a');
+                                    detailsPostLink.innerText = 'details';
+                                    detailsPostLink.href = 'post-details.html?postid=' + post.id;
+
+                                    divUser.append(postDiv,detailsPostLink);
+                            }
+                    });
         }
-    })
+            container.appendChild(divUser);
+            divUser.append(main, address, phone, website, company, postOfCurrentUser);
+        })
+
